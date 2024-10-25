@@ -1,0 +1,46 @@
+/* Custom Properties */
+:root {
+    --transition-duration: .3s;
+    --transition-cubic-bezier: cubic-bezier(0.17, 0.67, 0, 1.01);
+}
+
+/* Transformations on Card */
+.card-work:hover .card-image {
+    transform: scale(1.2);
+    transition: var(--transition-duration) var(--transition-cubic-bezier);
+}
+
+.card-work:hover .card-outer {
+    transform: scale(0.95);
+    transition: var(--transition-duration) var(--transition-cubic-bezier);
+}
+
+/* Animations on Navigation Items */
+.nav .nav-link::before {
+    content: "";
+    display: inline-block;
+    width: 0;
+    height: 2px;
+    background-color: currentColor;
+    transition: var(--transition-duration) var(--transition-cubic-bezier);
+}
+
+.nav .nav-link:hover::before {
+    width: 100%;
+}
+
+/* Button Hover Animation */
+.button:hover {
+    transition-property: color, background-color;
+    transition-duration: var(--transition-duration);
+}
+
+/* Transitions on Card */
+.card-work:hover .card-image {
+    transition: var(--transition-duration) var(--transition-cubic-bezier);
+}
+
+.card-work .card-inner {
+    transition: var(--transition-duration) var(--transition-cubic-bezier);
+}
+
